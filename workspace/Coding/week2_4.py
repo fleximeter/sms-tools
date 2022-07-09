@@ -13,7 +13,8 @@ x = np.cos(2 * np.pi * k0 / N * np.arange(N))
 X = np.array([])  # holds the output spectral samples
 nv = np.arange(-N/2, N/2)  # a normalizer to make the output be properly positioned
 kv = np.arange(-N/2, N/2)  # a normalizer to make the output be properly positioned
-
+print(nv)
+print(kv)
 for k in kv:  # k from 0 to N-1
     s = np.exp(1j * 2 * np.pi * k / N * nv)
     X = np.append(X, np.sum(x * np.conjugate(s)))
